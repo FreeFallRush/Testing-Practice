@@ -19,3 +19,8 @@ test("returns empty string if there is no input", () => {
 test("trims whitespaces and capitalize first letter ", () => {
   expect(capitalize("  something")).toBe("Something");
 });
+
+test("handles strings starting with non-letters", () => {
+  expect(capitalize("444click")).toBe("444click");
+  expect(capitalize("?hello")).toBe("?hello");
+});
