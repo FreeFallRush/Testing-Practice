@@ -20,4 +20,16 @@ describe("caesarCipher", () => {
   test("works with negative shifts", () => {
     expect(caesarCipher("def", -3)).toBe("abc");
   });
+
+  test("returns empty string for empty imput", () => {
+    expect(caesarCipher("", 3)).toBe("");
+  });
+
+  test("returns unchanged string with non-letters", () => {
+    expect(caesarCipher("123 !?", 7)).toBe("123 !?");
+  });
+
+  test("works with shifts bigger than 26", () => {
+    expect(caesarCipher("abc", 27)).toBe("bcd");
+  });
 });
