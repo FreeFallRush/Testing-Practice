@@ -18,6 +18,6 @@ describe("caesarCipher", () => {
   });
 
   test("works with negative shifts", () => {
-    expect(caesarCipher("def")).toBe("abc");
+    expect(caesarCipher("def", -1)).toBe("abc");
   });
 });
